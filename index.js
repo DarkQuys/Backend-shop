@@ -27,7 +27,7 @@ const PORT = process.env.PORT || 8080
 
 connectDB().then(()=>{
     app.listen(PORT,()=>{
-        console.log("connnect to DB")
+        console.log("connnect to DB " + process.env.MONGODB_URI)
         console.log("Server is running "+PORT)
     })
 })
