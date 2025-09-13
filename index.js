@@ -12,7 +12,11 @@ const app = express()
 //     credentials : true
 // }))
 
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  allowedHeaders: "*"
+}));
 app.use(express.json())
 app.use(cookieParser())
 
