@@ -7,17 +7,17 @@ const router = require('./routes')
 
 
 const app = express()
-// app.use(cors({
-//     origin : "http://localhost:3000/" ,
-//     credentials : true
-// }))
-
 app.use(cors({
-  origin: "https://frontend-shop-bice.vercel.app", // Lấy từ .env
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"], // Liệt kê header cụ thể
-  credentials: true // Nếu dùng cookie hoặc Authorization
-}));
+    origin : "https://frontend-shop-bice.vercel.app" ,
+    credentials : true
+}))
+
+// app.use(cors({
+//   origin: "https://frontend-shop-bice.vercel.app", // Lấy từ .env
+//   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+//   allowedHeaders: ["Content-Type", "Authorization"], // Liệt kê header cụ thể
+//   credentials: true // Nếu dùng cookie hoặc Authorization
+// }));
 app.use(express.json())
 app.use(cookieParser())
 
